@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-medgreen-deep: #145A32;
+  --color-medgreen-forest: #1E6B3B;
+  --color-medgold: #D6C27A;
+  --color-cream: #F5EFD8;
+  --color-neutral-light: #FBFAF4;
+  
+  --color-brand-primary: #145A32;
+  --color-brand-secondary: #1E6B3B;
+  --color-brand-gold: #D6C27A;
+  --color-brand-cream: #F5EFD8;
+  --color-brand-neutral: #FBFAF4;
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FBFAF4;
+  color: #145A32;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+[role="button"],
+a[href] {
+  cursor: pointer;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FBFAF4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D6C27A;
+  border-radius: 5px;
+  border: 2px solid #FBFAF4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1E6B3B;
+}
+
+/* Elegant radial gradients and glow effects */
+.bg-glow-radial {
+  background: radial-gradient(circle at 50% 50%, rgba(214, 194, 122, 0.15) 0%, rgba(245, 239, 216, 0.05) 50%, transparent 100%);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #145A32 30%, #D6C27A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-dark {
+  background: linear-gradient(135deg, #0D3E22 0%, #145A32 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Smooth custom glassmorphism */
+.glass-panel {
+  background: rgba(251, 250, 244, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 107, 59, 0.08);
+}
+
+.glass-panel-dark {
+  background: rgba(20, 90, 50, 0.98);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(214, 194, 122, 0.2);
+}
+
+/* Custom premium box shadows */
+.shadow-premium {
+  box-shadow: 0 4px 30px rgba(20, 90, 50, 0.03), 0 1px 3px rgba(20, 90, 50, 0.02);
+}
+
+.shadow-premium-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shadow-premium-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(20, 90, 50, 0.06), 0 2px 8px rgba(20, 90, 50, 0.03);
+}
+
+/* Animation utilities */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
